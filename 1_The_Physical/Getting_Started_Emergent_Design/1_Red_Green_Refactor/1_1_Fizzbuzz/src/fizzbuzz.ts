@@ -1,7 +1,7 @@
 export const fizzBuzz = (number: number): string  => 
 {
     if (number < 1 || number > 100) { 
-       throw new Error("Number must be less or equal to 100"); 
+       throw new Error("Number must be between 1 and 100"); 
     }
 
     if (number % 3 === 0 && number % 5 === 0) {

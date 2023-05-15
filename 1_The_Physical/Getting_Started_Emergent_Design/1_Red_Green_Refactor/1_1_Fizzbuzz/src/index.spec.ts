@@ -7,7 +7,7 @@ describe("fizzbuzz", () => {
         expect(fizzBuzz(42)).toBe("Fizz");
     });
 
-    it("should return 'Fizz' when given number devisable by 5", () => {    
+    it("should return 'Buzz' when given number devisable by 5", () => {    
         expect(fizzBuzz(5)).toBe("Buzz");
         expect(fizzBuzz(10)).toBe("Buzz");
     });
@@ -21,11 +21,10 @@ describe("fizzbuzz", () => {
         expect(fizzBuzz(43)).toBe("43");
     });
 
-    it("should throw an error when given a number more than 100", () => {
-        expect(() => {fizzBuzz(102)}).toThrow("Number must be less or equal to 100");
-    });
-
-    it("should throw an error when given a number less than 1", () => {
-        expect(() => {fizzBuzz(-12)}).toThrow("Number must be less or equal to 100");
+    it("should throw an error when given a number is not between 1 and 100", () => {
+        const message = "Number must be between 1 and 100";
+        
+        expect(() => {fizzBuzz(-12)}).toThrow(message);
+        expect(() => {fizzBuzz(102)}).toThrow(message);
     });
 });
