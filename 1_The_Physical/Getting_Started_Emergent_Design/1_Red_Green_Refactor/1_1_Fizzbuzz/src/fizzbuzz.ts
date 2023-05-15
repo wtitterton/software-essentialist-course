@@ -8,5 +8,9 @@ export const fizzBuzz = (number: Number): string  =>
     return "Buzz";
   }  
 
+  if (number === 15) {
+    return "FizzBuzz";
+  }  
+
   return number.toString();
 }
