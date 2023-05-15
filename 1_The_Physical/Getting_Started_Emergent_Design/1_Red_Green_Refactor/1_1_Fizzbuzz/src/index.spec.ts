@@ -13,6 +13,7 @@ describe("fizzbuzz", () => {
 
     it("should return 'FizzBuzz' when number devisable by 3 and 5", () => {    
         expect(fizzBuzz(15)).toBe("FizzBuzz");
+        expect(fizzBuzz(45)).toBe("FizzBuzz");
     });
 
     it("should return '43' when given 43", () => {    

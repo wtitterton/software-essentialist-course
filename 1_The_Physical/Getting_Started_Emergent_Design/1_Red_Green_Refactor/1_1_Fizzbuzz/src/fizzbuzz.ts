@@ -11,8 +11,6 @@ export const fizzBuzz = (number: number): string  =>
   if (number === 5) {
     return "Buzz";
   }  
-
- 
-
+  
   return number.toString();
 }
