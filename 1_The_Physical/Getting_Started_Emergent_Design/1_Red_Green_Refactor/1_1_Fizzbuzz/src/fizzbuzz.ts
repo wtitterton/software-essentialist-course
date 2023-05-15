@@ -1,4 +1,4 @@
 export const fizzBuzz = (number: Number): string  => 
 {
-  return ""
+  return number.toString();
 }
