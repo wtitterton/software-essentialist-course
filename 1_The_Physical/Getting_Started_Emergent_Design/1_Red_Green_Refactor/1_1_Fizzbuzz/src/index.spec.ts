@@ -5,4 +5,8 @@ describe("fizzbuzz", () => {
         expect(typeof fizzBuzz(1)).toBe("string");
     });
 
+    it("should return '1' when given 1", () => {
+        expect(typeof fizzBuzz(1)).toBe("1");
+    }) 
+
 });
