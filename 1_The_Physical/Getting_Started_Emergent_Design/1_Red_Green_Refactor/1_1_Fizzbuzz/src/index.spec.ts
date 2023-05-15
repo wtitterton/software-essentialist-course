@@ -1,7 +1,8 @@
+import { fizzBuzz } from "./fizzbuzz";
 
 describe("fizzbuzz", () => {
     it("should return a string", () => {
-        expect(fizzBuzz(1)).toBeInstanceOf(String);
+        expect(typeof fizzBuzz(1)).toBe("string");
     });
 
 });
