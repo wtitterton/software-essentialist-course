@@ -17,8 +17,10 @@ describe("fizzbuzz", () => {
         expect(fizzBuzz(45)).toBe("FizzBuzz");
     });
 
-    it("should return '43' when given 43", () => {    
+    it("should return a number as a string", () => {    
         expect(fizzBuzz(43)).toBe("43");
+        expect(fizzBuzz(8)).toBe("8");
+        expect(fizzBuzz(58)).toBe("58");
     });
 
     it("should throw an error when given a number is not between 1 and 100", () => {
