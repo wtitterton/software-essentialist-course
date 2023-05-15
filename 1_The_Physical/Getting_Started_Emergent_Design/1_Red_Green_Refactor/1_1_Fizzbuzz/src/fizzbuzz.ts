@@ -1,6 +1,6 @@
 export const fizzBuzz = (number: number): string  => 
 {
-  if (number === 15) {
+  if (number % 3 === 0 && number % 5 === 0) {
     return "FizzBuzz";
   } 
 
@@ -11,6 +11,6 @@ export const fizzBuzz = (number: number): string  =>
   if (number === 5) {
     return "Buzz";
   }  
-  
+
   return number.toString();
 }
