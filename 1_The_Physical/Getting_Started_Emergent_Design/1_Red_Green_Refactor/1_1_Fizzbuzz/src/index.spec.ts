@@ -21,7 +21,7 @@ describe("fizzbuzz", () => {
         expect(fizzBuzz(43)).toBe("43");
     });
 
-    it("should throw an error when given a number more than 100", () =>{
-        expect(fizzBuzz(102)).toThrowError("Number must be less than 100");
+    it("should throw an error when given a number more than 100", () => {
+        expect(() => {fizzBuzz(102)}).toThrow("Number must be less or equal to 100");
     });
 });
