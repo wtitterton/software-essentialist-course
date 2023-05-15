@@ -2,7 +2,7 @@ import { fizzBuzz } from "./fizzbuzz";
 
 describe("fizzbuzz", () => {
 
-    test.each([3,9,42])("should return 'Fizz' when given number devisable by 3", (number) => {
+    test.each([3, 9, 42])("should return 'Fizz' when given number devisable by 3", (number) => {
         expect(fizzBuzz(number)).toBe("Fizz");
     });
 
