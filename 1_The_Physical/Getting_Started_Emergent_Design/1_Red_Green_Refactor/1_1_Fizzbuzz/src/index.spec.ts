@@ -9,6 +9,7 @@ describe("fizzbuzz", () => {
 
     it("should return 'Fizz' when given number devisable by 5", () => {    
         expect(fizzBuzz(5)).toBe("Buzz");
+         expect(fizzBuzz(10)).toBe("Buzz");
     });
 
     it("should return 'FizzBuzz' when number devisable by 3 and 5", () => {    
