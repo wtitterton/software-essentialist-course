@@ -9,7 +9,7 @@ describe("fizzbuzz", () => {
 
     it("should return 'Fizz' when given number devisable by 5", () => {    
         expect(fizzBuzz(5)).toBe("Buzz");
-         expect(fizzBuzz(10)).toBe("Buzz");
+        expect(fizzBuzz(10)).toBe("Buzz");
     });
 
     it("should return 'FizzBuzz' when number devisable by 3 and 5", () => {    
@@ -19,5 +19,9 @@ describe("fizzbuzz", () => {
 
     it("should return '43' when given 43", () => {    
         expect(fizzBuzz(43)).toBe("43");
+    });
+
+    it("should throw an error when given a number more than 100", () =>{
+        expect(fizzBuzz(102)).toThrowError("Number must be less than 100");
     });
 });
