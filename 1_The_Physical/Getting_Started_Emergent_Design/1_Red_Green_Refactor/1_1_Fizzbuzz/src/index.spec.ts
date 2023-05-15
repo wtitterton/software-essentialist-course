@@ -29,4 +29,9 @@ describe("fizzbuzz", () => {
         expect(() => {fizzBuzz(-12)}).toThrow(message);
         expect(() => {fizzBuzz(102)}).toThrow(message);
     });
+
+    it("should throw and error when a non number is provided", () => {
+         const message = "Please provide a number";
+         expect(() => {fizzBuzz("non number")}).toThrow(message);
+    });
 });
