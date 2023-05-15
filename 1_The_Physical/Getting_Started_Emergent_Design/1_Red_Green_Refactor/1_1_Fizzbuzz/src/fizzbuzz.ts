@@ -4,5 +4,9 @@ export const fizzBuzz = (number: Number): string  =>
     return "Fizz";
   }  
 
+  if (number === 5) {
+    return "Buzz";
+  }  
+
   return number.toString();
 }
