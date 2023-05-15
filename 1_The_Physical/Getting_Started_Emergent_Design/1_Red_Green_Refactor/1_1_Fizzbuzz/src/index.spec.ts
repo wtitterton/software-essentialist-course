@@ -23,7 +23,7 @@ describe("fizzbuzz", () => {
         expect(fizzBuzz(58)).toBe("58");
     });
 
-    it("should throw an error when given a number is not between 1 and 100", () => {
+    it("should throw an error when given a number that is not between 1 and 100", () => {
         const message = "Number must be between 1 and 100";
         
         expect(() => {fizzBuzz(-12)}).toThrow(message);
