@@ -1,3 +1,4 @@
 export const isPalindrome = (input: string): boolean => {
-    return true;
+    const reversed = input.split('').reverse().join('');
+    return reversed === input;
 }
