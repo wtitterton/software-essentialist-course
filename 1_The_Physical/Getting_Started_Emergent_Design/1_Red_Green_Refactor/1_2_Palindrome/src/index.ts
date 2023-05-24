@@ -1,4 +1,11 @@
 export const isPalindrome = (input: string): boolean => {
-    const reversed = input.replace( /\s/g, '').split('').reverse().join('').toLocaleLowerCase();
-    return reversed === input.replace( /\s/g, '').toLocaleLowerCase();
+  return reverse(formatString(input)) === formatString(input)
+}
+
+const reverse = (input: string): string => {
+    return input.split('').reverse().join('');
+}
+
+const formatString = (input: string): string => {
+    return input.replace( /\s/g, '').toLocaleLowerCase();
 }
