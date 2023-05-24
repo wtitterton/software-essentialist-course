@@ -10,8 +10,11 @@ describe('palindrome checker', () => {
         expect(isPalindrome(word)).toBe(true)
     });
 
-    it("should return false when given 'Momx'", () => {
-        expect(isPalindrome('Momx')).toBe(false)
-    })
+    test.each([
+    "Momx",
+    "Never Odd or Even1"
+    ])('returns false when given the word %s', (word: string) => {
+        expect(isPalindrome(word)).toBe(false)
+    });
 
 })
