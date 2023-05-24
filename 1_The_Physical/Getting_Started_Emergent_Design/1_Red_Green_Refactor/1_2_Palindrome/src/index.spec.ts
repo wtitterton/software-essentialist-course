@@ -8,4 +8,8 @@ describe('palindrome checker', () => {
     it("should return false when given 'Momx'", () => {
         expect(isPalindrome('Momx')).toBe(false)
     })
+
+    it("should return true when given 'xMomx'", () => {
+        expect(isPalindrome('xMomx')).toBe(true)
+    })
 })
