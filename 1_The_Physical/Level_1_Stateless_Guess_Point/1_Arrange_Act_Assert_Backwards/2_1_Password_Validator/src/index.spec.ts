@@ -14,6 +14,12 @@ describe('password validator', () => {
     expect(result.isValid).not.toBeTruthy();
     expect(result.errors).toEqual([{"message": "password must contain at least one digit.", "type": "digit"}])
   })
+
+  it("knows thePhysical1234567 is in valid because of exceeding the 15 character length", () => {
+    const result = isValidPassword("thePhysical1234567");
+    expect(result.isValid).not.toBeTruthy();
+    expect(result.errors).toEqual([{"message": "password must be less than 15 characters", "type": "length"}])
+  })
 })
 
 

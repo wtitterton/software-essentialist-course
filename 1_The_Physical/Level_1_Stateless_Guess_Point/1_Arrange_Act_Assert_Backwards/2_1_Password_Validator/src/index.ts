@@ -12,6 +12,20 @@ interface validationResult {
 export const isValidPassword = (password: string): validationResult => {
     const hasAtleastOneDigit = /\d/;
     const hasAtleastOneUppercaseLetter = /(.*[A-Z].*)/;
+    const maxLimit = 15
+    const minLimit = 5;
+
+    if(password.length < minLimit || password.length > maxLimit) {
+        return {
+            isValid: false,
+            errors: [ 
+                {
+                    type: 'length',
+                    message: 'password must be less than 15 characters'
+                }
+            ]
+        }
+    }
 
     if (!hasAtleastOneUppercaseLetter.test(password)) {
          return {
