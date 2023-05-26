@@ -7,6 +7,12 @@ describe('password validator', () => {
     const result = isValidPassword('maxwell1_c');
     expect(result.isValid).not.toBeTruthy();
     expect(result.errors).toEqual([{"message": "password must contain at least one uppercase letter", "type": "uppercase"}])
+  });
+
+  it('knows that "maxwellTheBe" is invalid because of a lack of digits', () => {
+    const result = isValidPassword('maxwellTheBe');
+    expect(result.isValid).not.toBeTruthy();
+    expect(result.errors).toEqual([{"message": "password must contain at least one digit.", "type": "digit"}])
   })
 })
 
