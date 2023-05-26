@@ -24,7 +24,17 @@ describe('password validator', () => {
         {"message": "password must contain at least one digit.", "type": "digit"}
       ]
     )
-  })
+  });
+
+   test.each([
+     'max1Test',
+     'TestPassword1',
+     "PASSWORD1"
+    ])('knows that %s is an valid password', (password: string) => {
+        const result = isValidPassword(password);
+        expect(result.isValid).toBeTruthy();
+        expect(result.errors.length).toBe(0)
+    });
 })
 
 
