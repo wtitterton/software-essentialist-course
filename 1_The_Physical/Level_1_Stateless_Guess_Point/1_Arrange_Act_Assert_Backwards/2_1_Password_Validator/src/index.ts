@@ -14,51 +14,26 @@ export const isValidPassword = (password: string): validationResult => {
     const hasAtleastOneUppercaseLetter = /(.*[A-Z].*)/;
     const maxLimit = 15
     const minLimit = 5;
+    const errors: ValidationError[] = [];
+    let isValid = true;
 
-    if(password.length < minLimit || password.length > maxLimit) {
-        return {
-            isValid: false,
-            errors: [ 
-                {
-                    type: 'length',
-                    message: 'password must be less than 15 characters'
-                }
-            ]
-        }
+    if (password.length < minLimit || password.length > maxLimit) {
+        isValid = false;
+        errors.push({type: 'length', message: 'password must be less than 15 characters'});
     }
 
     if (!hasAtleastOneUppercaseLetter.test(password)) {
-         return {
-        isValid: false,
-        errors: [ 
-            {
-                type: 'uppercase',
-                message: 'password must contain at least one uppercase letter'
-            }
-        ]
-        }
+        isValid = false;
+        errors.push({type: 'uppercase', message: 'password must contain at least one uppercase letter'});
     }
 
     if (!hasAtleastOneDigit.test(password)) {
-         return {
-        isValid: false,
-        errors: [ 
-            {
-                type: 'digit',
-                message: 'password must contain at least one digit.'
-            }
-         ]
-        }
+        isValid = false;
+         errors.push({type: 'digit', message: 'password must contain at least one digit.'});
     }
     
-    
     return {
-        isValid: false,
-        errors: [ 
-            {
-                type: 'uppercase',
-                message: 'password must contain at least one uppercase letter'
-            }
-        ]
+        isValid,
+        errors
     }
 }
