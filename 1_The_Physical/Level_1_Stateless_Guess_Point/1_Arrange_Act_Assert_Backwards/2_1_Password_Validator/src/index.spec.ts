@@ -20,6 +20,18 @@ describe('password validator', () => {
     expect(result.isValid).not.toBeTruthy();
     expect(result.errors).toEqual([{"message": "password must be less than 15 characters", "type": "length"}])
   })
+
+  it("should return multiple errors for 'invalidPasswords'", () => {
+    const result = isValidPassword("invalidPasswords");
+    expect(result.isValid).not.toBeTruthy();
+    expect(result.errors.length).toBe(2)
+    expect(result.errors).toEqual(
+      [
+        {"message": "password must be less than 15 characters", "type": "length"}, 
+        {"message": "password must contain at least one digit.", "type": "digit"}
+      ]
+    )
+  })
 })
 
 
