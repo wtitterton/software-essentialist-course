@@ -14,11 +14,9 @@ export interface ValidationResult {
 }
 
 export const isValidPassword = (password: string): ValidationResult => {
-    const validationResult = new EverySpecification([
+    return new EverySpecification([
         new LengthSpecification(password, 5, 15),
         new HasUppercaseSpecification(password),
         new HasDigitSpecification(password)
     ]).isSatisfied(password);
-
-    return validationResult
 }
