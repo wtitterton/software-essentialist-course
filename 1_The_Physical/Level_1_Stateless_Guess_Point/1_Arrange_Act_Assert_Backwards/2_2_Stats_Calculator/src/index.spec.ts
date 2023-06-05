@@ -33,7 +33,4 @@ describe('stats calculator', () => {
             expect(calculateStats([]).length).toBe(0);
         });
     })
-
-   
-    
 })
