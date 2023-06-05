@@ -41,5 +41,9 @@ describe('stats calculator', () => {
     it('should return undefined for avrg when an empty array is provided', () => {
         expect(calculateStats([]).avrg).toBeUndefined();
     });
+
+    it('should return 0 for length when an empty array is provided', () => {
+        expect(calculateStats([]).length).toBe(0);
+    });
     
 })
