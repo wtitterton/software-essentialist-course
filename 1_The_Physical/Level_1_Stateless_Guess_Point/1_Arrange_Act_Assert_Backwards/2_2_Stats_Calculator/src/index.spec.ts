@@ -17,7 +17,7 @@ describe('stats calculator', () => {
      * }
      */
 
-    it('knows the length of the array is 6', () => {
+    it('knows the length of [2, 4, 21, -8, 53, 40] is 6', () => {
         expect(calculateStats([2, 4, 21, -8, 53, 40]).length).toBe(6);
     })
 
