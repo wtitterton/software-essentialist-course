@@ -28,5 +28,9 @@ describe('stats calculator', () => {
     it('knows the min of [2, 4, 21, -8, 53, 40] is -8', () => {
         expect(calculateStats([2, 4, 21, -8, 53, 40]).min).toBe(-8);
     });
+
+    it('knows the max of [2, 4, 21, -8, 53, 40] is 53', () => {
+        expect(calculateStats([2, 4, 21, -8, 53, 40]).max).toBe(53);
+    });
     
 })
