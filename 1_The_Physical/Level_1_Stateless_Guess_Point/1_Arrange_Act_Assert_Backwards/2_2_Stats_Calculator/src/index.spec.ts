@@ -36,6 +36,10 @@ describe('stats calculator', () => {
     it('should return undefined for min and max when an empty array is provided', () => {
         expect(calculateStats([]).min).toBeUndefined();
         expect(calculateStats([]).max).toBeUndefined();
-    })
+    });
+
+    it('should return undefined for avrg when an empty array is provided', () => {
+        expect(calculateStats([]).avrg).toBeUndefined();
+    });
     
 })

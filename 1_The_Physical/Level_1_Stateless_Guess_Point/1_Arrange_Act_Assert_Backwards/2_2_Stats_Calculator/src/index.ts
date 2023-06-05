@@ -2,6 +2,7 @@ export const calculateStats = (numbers: number[]) => {
 
     if (numbers.length === 0) {
         return {
+            avrg: undefined,
             min: undefined,
             max: undefined
         }
