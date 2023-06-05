@@ -24,5 +24,9 @@ describe('stats calculator', () => {
     it('knows the avrg of [2, 4, 21, -8, 53, 40] is 18', () => {
         expect(calculateStats([2, 4, 21, -8, 53, 40]).avrg).toBe(18.666666666666668);
     });
+
+    it('knows the min of [2, 4, 21, -8, 53, 40] is -8', () => {
+        expect(calculateStats([2, 4, 21, -8, 53, 40]).min).toBe(-8);
+    });
     
 })
