@@ -1,4 +1,12 @@
 export const calculateStats = (numbers: number[]) => {
+
+    if (numbers.length === 0) {
+        return {
+            min: undefined,
+            max: undefined
+        }
+    }
+
     return {
       avrg: numbers.reduce((acc, curr) => acc + curr, 0) / numbers.length,
       length: numbers.length,

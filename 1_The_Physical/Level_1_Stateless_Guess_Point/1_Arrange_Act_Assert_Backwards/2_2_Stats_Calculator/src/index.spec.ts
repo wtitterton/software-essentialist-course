@@ -32,5 +32,10 @@ describe('stats calculator', () => {
     it('knows the max of [2, 4, 21, -8, 53, 40] is 53', () => {
         expect(calculateStats([2, 4, 21, -8, 53, 40]).max).toBe(53);
     });
+
+    it('should return undefined for min and max when an empty array is provided', () => {
+        expect(calculateStats([]).min).toBeUndefined();
+        expect(calculateStats([]).max).toBeUndefined();
+    })
     
 })
